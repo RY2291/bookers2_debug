@@ -8,6 +8,8 @@
     <%= f.text_area :body, class: 'form-control book_body' %>
   </div>
   <div class="form-group">
-    <%= f.submit class: 'btn btn-success' %>
+    <% if @user_ != current_user %>
+      <%= f.submit class: 'btn btn-success' %>
+    <% end %>
   </div>
 <% end %>
